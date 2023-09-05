@@ -1,0 +1,108 @@
+input:not([type='checkbox']),
+textarea,
+.input {
+  width: 100%;
+  resize: none;
+  font-size: 16px;
+  background-color: var(--black_color);
+  border: 1px solid var(--border_color);
+  color: var(--white_color);
+  border-radius: 12px;
+  padding: 14px 16px;
+  transition: 0.3s all;
+  &:disabled,
+  &.disabled {
+    color: var(--gray_color);
+  }
+  &::placeholder {
+    font-size: 16px;
+  }
+  &:-ms-input-placeholder {
+    color: var(--gray_color);
+  }
+  &::-ms-input-placeholder {
+    color: var(--gray_color);
+  }
+  &:focus {
+    transition: 0.3s all;
+    border-color: var(--yellow_color);
+  }
+  &.search {
+    font-size: 16px;
+    background-color: var(--block_color);
+    padding: 12px 12px 12px 48px;
+    border: none;
+  }
+  &.modal {
+    padding: 14px 16px;
+    font-size: 16px;
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+  &.black {
+    padding: 12px;
+    font-size: 16px;
+    background-color: var(--black_color);
+    border: none;
+    &::placeholder {
+      font-size: 16px;
+    }
+    &:focus {
+      border: none;
+    }
+  }
+  &.error {
+    transition: 0.3s all;
+    border-color: var(--red_color) !important;
+    &::placeholder {
+      color: var(--red_color);
+      transition: 0.3s all;
+    }
+    &:-ms-input-placeholder {
+      color: var(--red_color);
+      transition: 0.3s all;
+    }
+    &::-ms-input-placeholder {
+      color: var(--red_color);
+      transition: 0.3s all;
+    }
+  }
+  &.icon {
+    padding-left: 42px;
+  }
+}
+
+.input {
+  min-height: 39px;
+}
+
+textarea {
+  flex: 1 1 auto;
+  min-height: 140px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  font-weight: 300;
+  -webkit-text-fill-color: var(--white_color);
+  transition: background-color 5000s ease-in-out 0s;
+  background-color: var(--black_color) !important;
+  -webkit-box-shadow: 0 0 0 30px var(--black_color) inset !important;
+}
+
+@media (max-width: 600px) {
+  input:not([type='checkbox']),
+  textarea,
+  .input {
+    font-size: 16px;
+    padding: 14px 12px;
+  }
+}

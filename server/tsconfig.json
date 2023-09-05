@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "experimentalDecorators": true,
+    /* Modules */
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "@config/*": ["config/*"],
+      "*": ["node_modules/*", "src/typings/*"]
+    },
+    /* Emit */
+    "sourceMap": true,
+    "outDir": "dist", 
+    "baseUrl": ".",
+    "removeComments": false,
+    /* JS Support */
+    // "allowJs": true,
+    // "checkJs": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+  },
+  "include": ["src/**/*.ts", "app.ts", "paths.ts"],
+}

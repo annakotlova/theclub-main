@@ -1,0 +1,52 @@
+:root {
+  --black_color: #151515;
+  --black_opacity_color: rgba(21, 21, 21, 0.9);
+  --black_0_5_color: rgba(21, 21, 21, 0.5);
+  --block_color: #0e0e0e;
+  --white_color: #fff;
+  --gray_color: rgba(255, 255, 255, 0.4);
+  --blue_color: #5585ff;
+
+  --green_color: #48bd35;
+  --purple_color: #9578c6;
+  --yellow_color: #f7e428;
+  --red_color: #ff5454;
+
+  --border_color: rgba(255, 255, 255, 0.2);
+  --darkborder_color: #1f1f1f;
+
+  --yellow_hover: #ac9e18;
+}
+
+.gray {
+  color: var(--gray_color);
+}
+.white {
+  color: var(--white_color);
+}
+.black {
+  color: var(--black_color);
+}
+.green {
+  color: var(--green_color);
+}
+.purple {
+  color: var(--purple_color);
+}
+.yellow {
+  color: var(--yellow_color);
+}
+.red {
+  color: var(--red_color);
+}
+.yellow_filter {
+  filter: brightness(0) saturate(100%) invert(98%) sepia(70%) saturate(2339%) hue-rotate(334deg)
+    brightness(105%) contrast(94%);
+}
+.black_filter {
+  filter: brightness(0) saturate(100%);
+}
+.white_filter {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(0%) saturate(318%) hue-rotate(51deg)
+    brightness(117%) contrast(100%);
+}

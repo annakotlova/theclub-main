@@ -1,0 +1,159 @@
+$weight: 100;
+@while $weight < 1000 {
+  .fw#{$weight} {
+    font-weight: $weight;
+  }
+  $weight: $weight + 100;
+}
+
+@for $i from 10 through 100 {
+  .fz#{$i} {
+    font-size: $i + px;
+  }
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 36px;
+}
+
+strong {
+  font-weight: 600;
+}
+
+label,
+.cursor-pointer {
+  cursor: pointer;
+}
+input[type='file'] {
+  display: none;
+}
+
+.select-none {
+  user-select: none;
+}
+.object-cover {
+  object-fit: cover;
+}
+
+.text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  word-break: break-word;
+  -webkit-line-clamp: 1;
+  &-2 {
+    -webkit-line-clamp: 2;
+  }
+  &-3 {
+    -webkit-line-clamp: 3;
+  }
+  &-6 {
+    -webkit-line-clamp: 6;
+  }
+  &-left {
+    text-align: left;
+  }
+  &-center {
+    text-align: center;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-gradient {
+    background: linear-gradient(248.14deg, #6bb8ff 0%, #ff78f2 102.53%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}
+
+.common-separator {
+  width: 100%;
+  min-height: 1px;
+  background-color: var(--border_color);
+}
+
+code {
+  font-family: monospace;
+}
+
+a,
+.link {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--yellow_color);
+}
+
+.common-block {
+  background-color: var(--black_color);
+  border-radius: 24px;
+  padding: 32px;
+  &-b {
+    background: var(--block_color);
+    border-radius: 12px;
+    padding: 24px;
+  }
+}
+
+.common-drop {
+  background: var(--black_opacity_color);
+  border: 1px solid var(--black_color);
+  backdrop-filter: blur(5px);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.common-input {
+  position: relative;
+  &--name {
+    font-size: 16px;
+    color: var(--white_color);
+    margin-bottom: 12px;
+    gap: 12px;
+    position: relative;
+    &.black {
+      color: var(--yellow_color);
+    }
+  }
+  > img {
+    position: absolute;
+    bottom: 13px;
+    left: 12px;
+  }
+}
+
+
+
+.common-prompt {
+  position: absolute;
+  top: -2px;
+  right: 0;
+}
+
+@media (max-width: 600px) {
+  .common-input--name {
+    span {
+      font-size: 16px;
+    }
+  }
+}
+
+// ::-webkit-scrollbar {
+//   appearance: none;
+//   width: 7px;
+//   height: 7px;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//   border-radius: 4px;
+//   background-color: var(--block_color);
+//   box-shadow: 0 0 1px var(--block_color);
+// }
+
+// ::-webkit-scrollbar-button {
+//   display: none;
+// }

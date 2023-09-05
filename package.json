@@ -1,0 +1,24 @@
+{
+  "name": "secret",
+  "version": "0.0.1",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^7.3.0"
+  },
+  "scripts": {
+    "initial:server": "yarn install --cwd server",
+    "initial:client": "yarn install --cwd client",
+    "initial": "yarn run initial:server && yarn run initial:client && yarn install",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "dev:server": "cross-env NODE_ENV=development concurrently \"npm run dev --prefix server\"",
+    "dev:client": "cross-env NODE_ENV=development concurrently \"npm run dev --prefix client\"",
+    "build:client": "npm run build --prefix client",
+    "build:server": "npm run build --prefix server",
+    "build": "yarn run build:server && yarn run build:client",
+    "start": "yarn build && yarn production",
+    "production": "npm run production --prefix server"
+  },
+  "devDependencies": {
+    "@types/node": "^18.6.5"
+  }
+}

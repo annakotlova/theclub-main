@@ -1,0 +1,105 @@
+.common-calendar {
+  color: var(--white_color);
+  background-color: var(--black_color);
+  border: 1px solid var(--border_color);
+  border-radius: 12px;
+  border-radius: 8px;
+  &--container {
+    padding: 0 12px 12px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--block_color);
+  }
+  &--action {
+    margin-top: 12px;
+  }
+  &--month {
+    padding: 5px;
+    padding-bottom: 12px;
+    .prev,
+    .next {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
+    .prev {
+      transform: rotate(90deg);
+      margin-right: 20px;
+    }
+    .next {
+      transform: rotate(-90deg);
+      margin-left: 20px;
+    }
+    .type-name {
+      flex: 1;
+      width: 60%;
+      text-align: center;
+      font-size: 14px;
+      padding: 5px 0;
+      border-radius: 5px;
+      &.cursor {
+        transition: 0.3s background;
+        &:hover {
+          transition: 0.3s background;
+          background: var(--block_color);
+        }
+      }
+    }
+  }
+  &--wrapper {
+    .dayweek {
+      .day {
+        font-size: 9px;
+        text-transform: uppercase;
+        flex: 1;
+        text-align: center;
+      }
+    }
+    .weeks {
+      .week {
+        gap: 4px;
+        padding: 2px 0;
+        .date {
+          flex: 1;
+          &.prev,
+          &.next {
+            color: #c1c1c1;
+          }
+        }
+      }
+    }
+    .months {
+      .month {
+        width: 33.3%;
+        text-transform: capitalize;
+      }
+    }
+    .years {
+      .year {
+        width: 50%;
+      }
+    }
+  }
+  .date,
+  .month,
+  .year {
+    transition: 0.3s all;
+    text-align: center;
+    font-size: 14px;
+    padding: 8px 0;
+    border-radius: 4px;
+    &.today {
+      color: var(--yellow_color);
+    }
+    &.selected,
+    &:hover {
+      color: var(--black_color) !important;
+      background: var(--yellow_color);
+      transition: 0.3s all;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+import { ModalContent } from '@/interfaces/modal/modal.dto';
+
+export const event: Array<ModalContent> = [
+  {
+    id: 'event-create',
+    title: 'Внимание',
+    action: 'create',
+    request: '/event',
+    fileRequest: '/file/event/cover',
+    method: 'post',
+    fileMethod: 'patch',
+    message: 'Уважаемый организатор! Вы должны учитывать посещаемость участников, сканируя их QR-коды.\n\nНе забывайте это делать! В случае, если посещаемость будет низкой, ваш рейтинг понизится.',
+    cancelName: 'Отмена',
+    submitName: 'Всё понятно!',
+    emit: 'event-action',
+  },
+  {
+    id: 'event-support',
+    title: 'Выбрать помощника',
+    action: 'edit',
+    request: '/event/support',
+    method: 'patch',
+    submitName: 'Выбрать',
+    emit: 'event-action',
+  },
+  {
+    id: 'event-qrcode',
+    title: '',
+    action: 'static',
+    emit: 'event-action',
+  },
+  {
+    id: 'event-cancel',
+    title: 'Отмена мероприятия',
+    action: 'delete',
+    request: '/event/cancel',
+    method: 'patch',
+    message: 'отменить мероприятие',
+    submitName: 'Отменить',
+    emit: 'event-action',
+  },
+  {
+    id: 'event-delete',
+    title: 'Удалить мероприятия',
+    action: 'delete',
+    request: '/event',
+    method: 'delete',
+    message: 'удалить мероприятие',
+    submitName: 'Удалить',
+    emit: 'event-action',
+  },
+];
